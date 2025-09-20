@@ -1,4 +1,4 @@
-import logoImage from "@/assets/brain-dump-logo.png";
+import logoImage from "@/assets/logo-option-3.png";
 
 interface LogoProps {
   className?: string;
@@ -8,8 +8,20 @@ interface LogoProps {
 export const Logo = ({ className = "", size = "md" }: LogoProps) => {
   const sizeClasses = {
     sm: "h-12",
-    md: "h-16",
-    lg: "h-24"
+    md: "h-16", 
+    lg: "h-32"
+  };
+
+  const textSizeClasses = {
+    sm: "text-lg",
+    md: "text-2xl",
+    lg: "text-4xl"
+  };
+
+  const subtitleSizeClasses = {
+    sm: "text-xs",
+    md: "text-sm",
+    lg: "text-base"
   };
 
   return (
@@ -20,10 +32,10 @@ export const Logo = ({ className = "", size = "md" }: LogoProps) => {
         className={`${sizeClasses[size]} w-auto object-contain`}
       />
       <div className="flex flex-col">
-        <h1 className="text-2xl font-bold bg-gradient-to-r from-primary via-neural to-success bg-clip-text text-transparent">
+        <h1 className={`${textSizeClasses[size]} font-bold bg-gradient-to-r from-primary via-neural to-success bg-clip-text text-transparent`}>
           Brain Dump
         </h1>
-        <p className="text-sm text-muted-foreground font-medium">
+        <p className={`${subtitleSizeClasses[size]} text-muted-foreground font-medium`}>
           AI Stress to Success Hub
         </p>
       </div>
