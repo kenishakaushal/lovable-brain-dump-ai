@@ -32,8 +32,8 @@ export const Logo = ({ className = "", size = "md" }: LogoProps) => {
         className={`${sizeClasses[size]} w-auto object-contain`}
       />
       <div className="flex flex-col">
-        <h1 className={`${textSizeClasses[size]} font-bold bg-gradient-to-r from-primary via-neural to-success bg-clip-text text-transparent`}>
-          Brain Dump
+        <h1 className={`${textSizeClasses[size]} font-bold bg-gradient-to-r from-stress via-primary via-neural to-calm bg-clip-text text-transparent`}>
+          BrainDump
         </h1>
         <p className={`${subtitleSizeClasses[size]} text-muted-foreground font-medium`}>
           AI Stress to Success Hub

@@ -8,53 +8,62 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 248 250 252;
-    --foreground: 217 19% 11%;
+    --background: 250 250 255;
+    --foreground: 240 5% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 217 19% 11%;
+    --card-foreground: 240 5% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 217 19% 11%;
+    --popover-foreground: 240 5% 15%;
 
-    /* AI Brain Theme Colors */
-    --primary: 226 70% 55%;
+    /* BrainDump Purple Raindrops Palette */
+    --stress: 333 91% 50%;        /* F72585 - Hot Pink (Stress) */
+    --stress-foreground: 0 0% 98%;
+    
+    --primary: 303 68% 35%;       /* B5179E - Magenta */
     --primary-foreground: 0 0% 98%;
-    --primary-glow: 226 70% 70%;
-
-    --secondary: 263 70% 50%;
+    
+    --secondary: 275 61% 39%;     /* 7209B7 - Purple */
     --secondary-foreground: 0 0% 98%;
-
-    --success: 142 71% 45%;
-    --success-foreground: 0 0% 98%;
-    --success-glow: 142 71% 60%;
-
-    --neural: 196 100% 47%;
+    
+    --deep: 269 73% 34%;          /* 560BAD - Deep Purple */
+    --deep-foreground: 0 0% 98%;
+    
+    --neural: 245 50% 56%;        /* 4361EE - Blue */
     --neural-foreground: 0 0% 98%;
+    
+    --success: 195 77% 61%;       /* 4895EF - Light Blue */
+    --success-foreground: 0 0% 10%;
+    
+    --calm: 195 100% 68%;         /* 4CC9F0 - Cyan (Success/Calm) */
+    --calm-foreground: 0 0% 10%;
 
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 9% 46%;
+    --muted: 245 20% 96%;
+    --muted-foreground: 245 8% 46%;
 
-    --accent: 226 70% 55%;
+    --accent: var(--neural);
     --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84% 60%;
+    --destructive: var(--stress);
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 226 70% 55%;
+    --border: 245 20% 88%;
+    --input: 245 20% 88%;
+    --ring: var(--neural);
 
-    /* Custom Gradients */
+    /* BrainDump Gradients */
+    --gradient-stress-to-success: linear-gradient(135deg, hsl(var(--stress)), hsl(var(--primary)), hsl(var(--neural)), hsl(var(--success)), hsl(var(--calm)));
     --gradient-brain: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--neural)));
-    --gradient-success: linear-gradient(135deg, hsl(var(--neural)), hsl(var(--success)));
-    --gradient-neural: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-wellness: linear-gradient(135deg, hsl(var(--neural)), hsl(var(--success)));
+    --gradient-motivation: linear-gradient(135deg, hsl(var(--success)), hsl(var(--calm)));
     
     /* Shadows */
-    --shadow-neural: 0 20px 40px -10px hsl(var(--primary) / 0.3);
-    --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.5);
+    --shadow-stress: 0 20px 40px -10px hsl(var(--stress) / 0.3);
+    --shadow-neural: 0 20px 40px -10px hsl(var(--neural) / 0.3);
+    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.4);
 
-    --radius: 12px;
+    --radius: 16px;
 
     --sidebar-background: 0 0% 98%;
 
